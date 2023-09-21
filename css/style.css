@@ -114,6 +114,8 @@ body {
   }
 }
 
+
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -122,6 +124,27 @@ body {
   display: inline-block;
   transition: all 0.2s;
   position: relative;
+
+  animation-name: moveInBottom;
+  animation-duration: 2s;
+  
+  
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(+200px);
+  }
+
+  /* 80% {
+    transform: translateY(-10px);
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .btn:hover {
@@ -156,6 +179,6 @@ body {
 }
 
 .btn:hover::after {
-  transform: scale(1.2);
+  transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
